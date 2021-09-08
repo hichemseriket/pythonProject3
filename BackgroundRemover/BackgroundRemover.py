@@ -6,6 +6,7 @@ import os
 cap = cv2.VideoCapture(0)
 cap.set(3, 640)
 cap.set(4, 480)
+
 # pour augmenter les fps
 cap.set(cv2.CAP_PROP_FPS, 60)
 
