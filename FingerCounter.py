@@ -30,7 +30,8 @@ print(len(overlayList))
 pTime = 0
 
 # j'instancier le hand detector pour que je puisse l'utilisé
-detector = htm.handDetector(detectionCon=0.6, maxHands=4)
+# dans max hand je fixe le nombbre de mian detectable et de ce fait la precision serait bien meilleure mais detecte uniquement le nombre donné
+detector = htm.handDetector(detectionCon=0.6, maxHands=2)
 
 tipIds = [4, 8, 12, 16, 20]
 
@@ -59,6 +60,7 @@ while True:
         # print(222)
         totalFingers = fingers.count(1)
         print(" le nombre de doight levé est : ", (totalFingers))
+        print(" HICHEM : ")
 
         h, w, c = overlayList[totalFingers - 1].shape
         img[0:h, 0:w] = overlayList[totalFingers - 1]
@@ -66,6 +68,8 @@ while True:
         cv2.rectangle(img, (20, 425), (370, 625), (0, 255, 0), cv2.FILLED)
         cv2.putText(img, str(totalFingers), (45, 575), cv2.FONT_HERSHEY_PLAIN,
                     10, (255, 0, 0), 25)
+        # cv2.putText(img, "HICHEM", (200, 200), cv2.FONT_HERSHEY_PLAIN,
+        #             10, (255, 0, 0), 25)
 
     cTime = time.time()
     fps = 1 / (cTime - pTime)

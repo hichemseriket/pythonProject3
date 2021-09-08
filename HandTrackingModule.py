@@ -5,7 +5,7 @@ import tensorflow as tf
 import mediapipe as mp
 import time
 
-wCam, hCam = 1480, 1200
+wCam, hCam = 1080, 720
 
 class handDetector():
     def __init__(self, mode=False, maxHands=4, detectionCon=0.7, trackCon=0.5):

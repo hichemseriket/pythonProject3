@@ -7,7 +7,7 @@
       <excludeFolder url="file://$MODULE_DIR$/Pose/PoseVideos" />
       <excludeFolder url="file://$MODULE_DIR$/AITrainer" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.8 (tf2.4)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.8 (2)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

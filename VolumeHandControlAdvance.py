@@ -1,8 +1,13 @@
+
+ #############################
+ # l'env fonctionnel est python 3.8(2)
+ ##############################
 import cv2
 import time
 import numpy as np
 import HandTrackingModule as htm
 import math
+import mediapipe as mp
 
 from ctypes import cast, POINTER
 from comtypes import CLSCTX_ALL

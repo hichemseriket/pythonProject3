@@ -24,12 +24,12 @@ elif a == 1:
 if d > 0:
     print("delta est positive et vaut", d, "l'equation admet les deux solution suivant")
     retour = [s1, s2]
-    print(s1, s2)
+    print("S1 :", s1,"et S2 :", s2)
 elif (d < 0):
-    print("delta est negative et vaut", d, "l'equation n'admet pas de solution reel")
+    print("delta est negative et vaut", d, "l'equation n'admet pas de solution reel mais deux solutions imaginaires")
     print("les deux solution imaginaire sont : ")
     retour = [z1, z2]
-    print(z1, z2)
+    print( "Z1 :", z1, "et Z2 :", z2)
 else:
     print("delta vaut", d, "l'equation admet une seule solution")
     retour = [s]

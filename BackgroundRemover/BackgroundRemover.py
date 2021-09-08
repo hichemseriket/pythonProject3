@@ -22,12 +22,13 @@ for imgPath in listImg:
     imgList.append(img)
 print(len(listImg))
 
+print(" laissez moi bossez boredel de merde")
 indexImg = 0
 while True:
     success, img = cap.read()
 
     # l'option treshold est ici pour mieux decoupé le personnage du BG, a 0.8 elle me parrait coupe bien
-    imgOut = segmentor.removeBG(img, imgList[indexImg], threshold=0.5)
+    imgOut = segmentor.removeBG(img, imgList[indexImg], threshold=0.8)
 
     imgStacked = cvzone.stackImages([imgOut, img], 2, 1)
     _, imgStacked = fpsReader.update(imgStacked, color=(0, 0, 255))
@@ -40,7 +41,7 @@ while True:
     if key == ord('a'):
         if indexImg > 0:
             indexImg -= 1
-    elif key == ord('d'):
+    elif key == ord('z'):
         if indexImg < len(imgList) - 1:
             indexImg += 1
     elif key == ord('q'):
